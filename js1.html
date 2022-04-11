@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>building session</title>
+    <style>
+        .center {
+            text-align: center;
+            align-items: center;
+        }
+
+        body {
+            margin-top: 10%;
+            background-color: #110101;
+        }
+    </style>
+    <script>
+        var bulb = false
+        function turnOn() {
+            document.getElementById('img').src = "https://www.w3schools.com/js/pic_bulbon.gif"
+        }
+        function turnOff() {
+            document.getElementById('img').src = "https://www.w3schools.com/js/pic_bulboff.gif"
+        }
+        function turnOnOff() {
+            if (bulb == true) {
+                document.getElementById('img-1').src = "https://www.w3schools.com/js/pic_bulbon.gif"
+                bulb = false
+            }
+            else {
+                document.getElementById('img-1').src = "https://www.w3schools.com/js/pic_bulboff.gif"
+                bulb = true
+            }
+        }
+    </script>
+</head>
+
+<body >
+    <div class="row center">
+        <div>
+            <img id="img" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+            <br>
+            <button onclick="turnOn()">Turn On</button>
+            <button onclick="turnOff()">Turn Off</button>
+        </div>
+        <br>
+        <br>
+        <div>
+            <img id="img-1" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+            <br>
+            <button onclick="turnOnOff()">Turn On/Off</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
